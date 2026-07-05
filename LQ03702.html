@@ -239,7 +239,7 @@
         <div class="quick-card">
           <div class="quick-icon icon-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="quick-title">الصيانة القادمة</div>
-          <div class="quick-value">179 يوم</div>
+          <div class="quick-value">360 يوم</div>
           <span class="badge ok">مجدولة</span>
         </div>
         <div class="quick-card">
@@ -271,8 +271,8 @@
         </div>
         <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
         <div class="countdown-meta">
-          <div class="item"><div class="k">آخر PPM</div><div class="v">30/06/2026</div></div>
-          <div class="item"><div class="k">PPM القادمة</div><div class="v">30/12/2026</div></div>
+          <div class="item"><div class="k">آخر PPM</div><div class="v">05/07/2026</div></div>
+          <div class="item"><div class="k">PPM القادمة</div><div class="v">30/06/2027</div></div>
           <div class="item"><div class="k">التكرار</div><div class="v">كل 6 شهر</div></div>
         </div>
       </div>
@@ -288,7 +288,7 @@
         <div class="info-row"><span class="k">الموديل</span><span class="v">Radial</span></div>
         <div class="info-row"><span class="k">القسم</span><span class="v">purchasing</span></div>
         <div class="info-row"><span class="k">المستشفى / العميل</span><span class="v">Lana Medical</span></div>
-        <div class="info-row"><span class="k">الموقع</span><span class="v">—</span></div>
+        <div class="info-row"><span class="k">الموقع</span><span class="v">physiotherapy</span></div>
         <div class="info-row"><span class="k">تاريخ التركيب</span><span class="v">2026-06-30</span></div>
         <div class="info-row"><span class="k">نهاية الضمان</span><span class="v">2028-06-30</span></div>
         <div class="info-row"><span class="k">مهندس الصيانة</span><span class="v">Eng.Mahmoud Ghasan</span></div>
@@ -303,10 +303,19 @@
       </div>
       <div class="timeline">
         <div class="timeline-item">
+          <div class="t-dot done"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <div class="t-card">
+            <div class="t-head"><span class="t-title">تركيب الجهاز</span><span class="t-date">05/07/2026</span></div>
+            <div class="t-meta">بواسطة <b>Eng.Mahmoud Ghasan</b></div>
+            <div class="t-notes"></div>
+
+          </div>
+        </div>
+        <div class="timeline-item">
           <div class="t-dot pending"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><circle cx="12" cy="12" r="5"/></svg></div>
           <div class="t-card">
-            <div class="t-head"><span class="t-title">صيانة دورية قادمة</span><span class="t-date">30/12/2026</span></div>
-            <div class="t-meta">مجدولة تلقائيًا — <b>خلال 179 يوم</b></div>
+            <div class="t-head"><span class="t-title">صيانة دورية قادمة</span><span class="t-date">30/06/2027</span></div>
+            <div class="t-meta">مجدولة تلقائيًا — <b>خلال 360 يوم</b></div>
 
           </div>
         </div>
@@ -338,10 +347,11 @@
             <div class="doc-name">شهادة المعايرة</div>
           </a>
         </div>
-        <div class="doc-card soon">
-          <span class="doc-soon-tag">قريبًا</span>
-          <div class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div>
-          <div class="doc-name">تقرير الصيانة</div>
+        <div class="doc-card">
+          <a href="https://mahmoudghasan.github.io/Orthoserv-Cards/docs/LQ03702/maintenance_report.pdf" target="_blank" rel="noopener">
+            <div class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div>
+            <div class="doc-name">تقرير الصيانة</div>
+          </a>
         </div>
 
       </div>
@@ -398,8 +408,8 @@
     }
   }
   window.addEventListener('load', ()=>{
-    const totalDays = 183;
-    const remaining = 179;
+    const totalDays = 360;
+    const remaining = 360;
     const pct = totalDays > 0 ? Math.max(0, Math.min(100, ((totalDays-remaining)/totalDays)*100)) : (remaining <= 0 ? 100 : 0);
     let n = 0;
     const target = Math.max(0, remaining);
